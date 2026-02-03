@@ -1,0 +1,161 @@
+/* ================== HEADER BASE ================== */
+.header {
+  background-color: #FFFFFF;
+  width: 100%;
+  border-bottom: 1px solid #e7e5e5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================== CONTAINER ================== */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+/* ================== IZQUIERDA ================== */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: #080808;
+}
+
+/* ================== CENTRO ================== */
+.header-center {
+  display: flex;
+  gap: 7rem;
+}
+
+.header-center a {
+  color: #080808;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.header-center a:hover {
+  color: #db2777;
+}
+
+/* ================== BOTÓN MENU ================== */
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================== LOGIN DESKTOP ================== */
+.desktop-login {
+  display: flex;
+}
+
+/* ================== BOTÓN INICIAR SESIÓN ================== */
+.header-rigth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #FCE7F3;
+  transition: background-color 0.2s ease;
+}
+
+.header-rigth a {
+  color: black;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.header-rigth:hover {
+  background-color: #fbcfe8;
+}
+
+.header-rigth:hover a {
+  color: #9d174d;
+}
+
+/* ================== LOGIN MOBILE ================== */
+.mobile-login {
+  display: none;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 662px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .header-center {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    z-index: 1000;
+  }
+
+  .header-center.open {
+    display: flex;
+  }
+
+  .header-center a {
+    padding: 0.75rem 0;
+    text-align: center;
+    border-top: 1px solid #e7e5e5;
+  }
+
+  .mobile-login {
+    display: block;
+    background-color: #FCE7F3;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 600;
+    border-top: 1px solid #e7e5e5;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .mobile-login:hover {
+    background-color: #fbcfe8;
+    color: #9d174d;
+  }
+}
+
+/* ================== EXTRA SMALL ================== */
+@media (max-width: 480px) {
+  .brand {
+    display: none;
+  }
+}

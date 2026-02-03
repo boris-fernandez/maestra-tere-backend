@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="header-container">
+
+    <div class="header-left">
+      <div class="logo">
+        <img ngSrc="https://tse2.mm.bing.net/th/id/OIP.e8sbtRkimzceMBI4KnVRDQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="logo" fill priority />
+      </div>
+      <a routerLink="/" class="brand">Maestra Tere</a>
+    </div>
+
+    <button class="menu-btn" (click)="menuOpen = !menuOpen">☰</button>
+
+    <nav class="header-center" [class.open]="menuOpen">
+      <a routerLink="/">Inicio</a>
+      <a routerLink="/">Tienda</a>
+      <a routerLink="/">Sobre Mi</a>
+      <a routerLink="/" class="mobile-login">Iniciar Sesión</a>
+    </nav>
+
+    <div class="header-rigth desktop-login">
+      <a routerLink="/">Iniciar Sesión</a>
+    </div>
+
+  </div>
+</header>
+
