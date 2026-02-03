@@ -10,4 +10,5 @@ import { RouterModule } from '@angular/router';
 })
 export class Header {
   menuOpen:boolean = false;
+  isLogin: boolean = true;
 }
