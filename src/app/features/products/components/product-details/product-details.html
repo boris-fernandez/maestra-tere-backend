@@ -1,0 +1,68 @@
+<main class="product-container">
+  <section class="product-gallery">
+    <a routerLink="/" class="back-link">
+      <fa-icon [icon]="faArrowLeft"></fa-icon> Regresar
+    </a>
+    <div class="main-image-wrapper">
+      <img [ngSrc]="selectedImage" alt="Producto Principal" fill priority placeholder />
+    </div>
+
+    <div class="thumbnail-row">
+      @for (img of images; track $index) {
+      <div class="thumbnail" [class.active]="selectedImage === img" (click)="changeImage(img)">
+        <img [ngSrc]="img" alt="Vista miniatura" fill placeholder>
+      </div>
+      }
+    </div>
+  </section>
+
+  <section class="product-info">
+    <div class="info-header">
+      <div class="tags">
+        <span class="tag-level">Nivel: {{badge}}</span>
+        <span class="tag-format">Formato: {{format}}</span>
+      </div>
+    </div>
+
+    <h1 class="product-title">{{productTitle}}</h1>
+
+    <div class="price-section">
+      <span class="price-value">{{price | currency:'S/.'}} PEN</span>
+    </div>
+
+    <p class="description">
+      {{productDescription}}
+    </p>
+
+    <div class="benefits-card">
+      <h3>
+        <fa-icon [icon]="faCheckCircle"></fa-icon>
+        ¿Qué incluye este material?
+      </h3>
+      <ul>
+        @for(benefit of benefits; track $index){
+        <li><fa-icon [icon]="faCheck"></fa-icon>{{benefit}} </li>
+        }
+      </ul>
+    </div>
+
+    <a class="btn-whatsapp-large" src="/">
+      <fa-icon [icon]="faWhatsapp"></fa-icon> Comprar por WhatsApp
+    </a>
+
+    <div class="trust-note">
+      <fa-icon [icon]="faLock"></fa-icon> Compra 100% segura • Entrega digital inmediata
+    </div>
+  </section>
+</main>
+
+<section class="other-products-section">
+  <h2 class="other-products-title">Otros productos similares</h2>
+
+  <div class="other-products-grid">
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+  </div>
+</section>

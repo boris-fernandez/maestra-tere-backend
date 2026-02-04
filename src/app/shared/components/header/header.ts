@@ -1,10 +1,10 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [NgOptimizedImage, RouterModule],
+  imports: [NgOptimizedImage, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

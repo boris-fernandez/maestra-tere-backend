@@ -1,0 +1,24 @@
+<article class="product-card">
+  <a routerLink="/">
+    <div class="card-header">
+      <span class="badge">{{badge}}</span>
+      <div class="image-container">
+        <img ngSrc="Image_g5wb0w.png" alt="Kit" fill placeholder priority />
+
+      </div>
+    </div>
+
+    <div class="card-body">
+      <h3 class="product-title">{{productTitle}}</h3>
+      <p class="product-description">{{productDescription}}</p>
+
+      <div class="product-footer">
+        <span class="price">{{price | currency:'S/.'}}</span>
+      </div>
+
+      <span class="btn-detalles">Ver detalles</span>
+
+      <p class="footer-note">Compra y cuenta coordinada vía chat.</p>
+    </div>
+  </a>
+</article>

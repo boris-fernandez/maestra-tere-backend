@@ -11,7 +11,7 @@ a {
 
 /* ================== CONTAINER ================== */
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   height: 80px;
   display: flex;
@@ -120,6 +120,12 @@ a {
   .header-rigth {
     width: 110px;
     height: 40px;
+  }
+}
+
+@media (max-width: 856px) {
+  .header-center {
+    gap: 1rem;
   }
 }
 

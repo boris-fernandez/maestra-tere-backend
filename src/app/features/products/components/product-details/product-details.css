@@ -1,0 +1,279 @@
+/* ================== CONTENEDOR PRINCIPAL ================== */
+.product-container {
+  max-width: 1400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #000;
+  font-weight: 500;
+}
+
+/* ================== GALERÍA ================== */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.main-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 100vw, 480px);
+  background-color: #f9f9f9;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.main-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background-color: #fff;
+}
+
+/* ================== MINIATURAS ================== */
+.thumbnail-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.thumbnail {
+  position: relative;
+  width: clamp(70px, 12vw, 110px);
+  aspect-ratio: 1 / 1;
+  background-color: #f9f9f9;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.thumbnail:hover {
+  border-color: #a8d5ba;
+  transform: translateY(-2px);
+}
+
+
+/* ================== INFO PRODUCTO ================== */
+.product-info {
+  width: 100%;
+}
+
+/* ================== TAGS ================== */
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.tag-level,
+.tag-format {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tag-level {
+  background: #e8f5ed;
+  color: #2d5a3d;
+}
+
+.tag-format {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+/* ================== TÍTULO ================== */
+.product-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+/* ================== PRECIO ================== */
+.price-section {
+  margin: 16px 0 20px;
+}
+
+.price-value {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #fbcfe8;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* ================== DESCRIPCIÓN ================== */
+.description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* ================== BENEFICIOS ================== */
+.benefits-card {
+  background-color: #fff9f9;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.benefits-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.benefits-card ul {
+  list-style: none;
+}
+
+.benefits-card li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.benefits-card fa-icon {
+  color: #a8d5ba;
+}
+
+/* ================== BOTÓN WHATSAPP ================== */
+.btn-whatsapp-large {
+  width: 100%;
+  background-color: #25d366;
+  color: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp-large:hover {
+  background-color: #1eb954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* ================== NOTA DE CONFIANZA ================== */
+.trust-note {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ================== OTROS PRODUCTOS ================== */
+.other-products-section {
+  max-width: 1400px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+}
+
+.other-products-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+.other-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* ================== RESPONSIVE TABLET ================== */
+@media (max-width: 1024px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ================== RESPONSIVE MOBILE ================== */
+@media (max-width: 768px) {
+
+  .product-container {
+    padding: 0 16px;
+  }
+
+  .benefits-card {
+    padding: 20px;
+  }
+
+  .btn-whatsapp-large {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .thumbnail-row {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .other-products-section {
+    margin-top: 60px;
+  }
+
+  .other-products-title {
+    text-align: center;
+  }
+
+  .other-products-grid {
+    gap: 24px;
+  }
+}
